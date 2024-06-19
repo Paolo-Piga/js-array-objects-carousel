@@ -10,13 +10,13 @@
     align-items: center;
     width: 2000px;
     height: 1500px;
-    background-color: grey;
+    background-color: grey; 
 }
 
 #container-img{
-    height: 800px;
-    width: 1000px;
-    background-color: red;
+    height: 500px;
+    width: 800px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,7 +28,7 @@
     width: 100%;
     height: 100%;
     border: 1px solid black;
-    background-color: green;
+    
 }
 
 .celle > img{
@@ -41,11 +41,11 @@
 .frecce{
     display: flex;
     height: 20%;
-    width: 50%;
+    width: 40%;
     align-items: center;
     justify-content: space-between;
     position: absolute;
-    font-size: 80px;
+    font-size: 40px;
     color: white;
     
     
@@ -58,5 +58,10 @@
 }
 
 .celle.active{
-    display: block;
+    display: inline-block;
+}
+
+h3{
+    
+    
 }

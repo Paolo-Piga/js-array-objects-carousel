@@ -37,7 +37,9 @@ images.forEach((img) =>{
     console.log(img);
     // cellette.innerHTML += img.image;
     contImg.innerHTML += `<div class="celle">
-    <img src="${img.image}" alt=""> </div>`
+    <img src="${img.image}" alt="">
+    <h3>${img.text}</h3> 
+    </div>`
 })
 
 
@@ -71,7 +73,7 @@ right.addEventListener("click", function(){
 })
 
 left.addEventListener("click", function(){
-    if (activeCella < images.length - 1) {
+    if (activeCella > 0) {
         imgCella[activeCella].classList.remove("active");
         activeCella--;
         imgCella[activeCella].classList.add("active");

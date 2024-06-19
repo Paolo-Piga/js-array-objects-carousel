@@ -1,5 +1,7 @@
-let cellette = document.getElementById(`celle`);
-console.log(cellette);
+// let cellette = document.getElementsByClassName(`celle`);
+// console.log(cellette);
+
+let contImg = document.getElementById(`container-img`);
 
 // array con immagini, titolo e testo
 const images = [ 
@@ -30,8 +32,53 @@ const images = [
 ];
 // console.log(images);
 
-// utilizzo un forEach per il markup statico, inserisco l'immagine grande
+// Milestone 1: utilizzo un forEach per il markup statico, inserisco l'immagine grande
 images.forEach((img) =>{
-    console.log(img.image);
-    cellette[0].innerHTML += img.image;
+    console.log(img);
+    // cellette.innerHTML += img.image;
+    contImg.innerHTML += `<div class="celle">
+    <img src="${img.image}" alt=""> </div>`
+})
+
+
+
+{/* <div class="celle">
+                <img src="" alt="">
+            </div> */}
+
+// milestone 2: creo il carosello
+const imgCella = document.getElementsByClassName(`celle`);
+
+let activeCella = 0;
+
+imgCella[activeCella].classList.add("active");
+
+const right = document.querySelector(".destra");
+const left = document.querySelector(".sinistra");
+
+// aggiungo l'event listener
+right.addEventListener("click", function(){
+    if (activeCella < images.length - 1) {
+        imgCella[activeCella].classList.remove("active");
+        activeCella++;
+        imgCella[activeCella].classList.add("active");
+    }
+    else{
+        imgCella[activeCella].classList.remove("active");
+        activeCella = 0;
+        imgCella[activeCella].classList.add("active");
+    }
+})
+
+left.addEventListener("click", function(){
+    if (activeCella < images.length - 1) {
+        imgCella[activeCella].classList.remove("active");
+        activeCella--;
+        imgCella[activeCella].classList.add("active");
+    }
+    else{
+        imgCella[activeCella].classList.remove("active");
+        activeCella = images.length-1;
+        imgCella[activeCella].classList.add("active");
+    }
 })

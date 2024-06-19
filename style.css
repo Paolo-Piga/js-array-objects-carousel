@@ -10,7 +10,7 @@
     align-items: center;
     width: 210vh;
     height: 100vh;
-    background-color: black;
+    background-color: grey;
 }
 
 #container-img{
@@ -21,11 +21,44 @@
     align-items: flex-end;
     justify-content: flex-end;
     flex-direction: column;
+    border: 1px solid black;
 }
 
 .celle{
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     border: 1px solid black;
     background-color: green;
+}
+
+.celle > img{
+    width: 100%;
+    height: 100%;
+}
+
+
+#container-img > .sinistra{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+#container-img > .destra{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+
+
+.celle{
+    display: none;
+}
+
+.celle.active{
+    display: block;
 }

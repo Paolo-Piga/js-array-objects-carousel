@@ -78,7 +78,7 @@ left.addEventListener("click", function(){
     }
     else{
         imgCella[activeCella].classList.remove("active");
-        activeCella = images.length-1;
+        activeCella = images.length - 1;
         imgCella[activeCella].classList.add("active");
     }
 })
